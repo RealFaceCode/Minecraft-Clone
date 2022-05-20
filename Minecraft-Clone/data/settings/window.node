@@ -1,0 +1,14 @@
+window:
+	settings:
+		width:
+		   -	1280
+		resizable:
+		   -	0
+		height:
+		   -	800
+		fullscreen:
+		   -	0
+		monitor:
+		   -	-1
+		vMode:
+		   -	1
