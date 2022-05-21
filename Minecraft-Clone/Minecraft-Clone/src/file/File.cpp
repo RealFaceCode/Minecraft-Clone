@@ -194,7 +194,7 @@ uint64_t File::getUI64()
 	return rData;
 }
 
-bool File::getbool()
+bool File::getBool()
 {
 	uint8_t size = sizeof(bool);
 	uint8_t* vData = getData(size);
@@ -300,7 +300,7 @@ void File::addUI64(uint64_t dat)
 	addData(&dat, sizeof(uint64_t));
 }
 
-void File::addbool(bool dat)
+void File::addBool(bool dat)
 {
 	addData(&dat, sizeof(bool));
 }
@@ -315,12 +315,14 @@ void File::addDouble(double dat)
 	addData(&dat, sizeof(double));
 }
 
+//Adds a string without the string length
 void File::addString(const char* dat)
 {
 	size_t sLen = strlen(dat);
 	addData((void*)dat, sLen);
 }
 
+//Adds a string with the string length
 void File::addCString(const char* dat)
 {
 	size_t sLen = strlen(dat);

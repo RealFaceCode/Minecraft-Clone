@@ -51,4 +51,7 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\test3.node" />
+  </ItemGroup>
 </Project>

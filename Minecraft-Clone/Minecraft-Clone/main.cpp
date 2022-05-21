@@ -4,11 +4,9 @@
 #include "src/file/DataPackager.h"
 #include "src/util/Input.h"
 
+//TODO: node type tracking
+
 int main() {
-
-	//auto n = Node::loadNode("data/test.node");
-	//n.printNodes();
-
 	Window::INIT();
 
 	Window::Window window("data/settings/window.node");

@@ -104,6 +104,9 @@
     <ClInclude Include="src\util\Input.h" />
     <ClInclude Include="src\util\Window.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\test3.node" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

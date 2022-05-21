@@ -47,7 +47,7 @@ void Node::packNotes(Node* rootNode, File* file, int tab)
 		}
 
 		file->addString(node.nodeName.c_str());
-		file->addString(":\n");
+		file->addString(":\r\n");
 		for (auto dat : node.data)
 		{
 			for (int i = 0; i < tab; i++)
@@ -57,7 +57,7 @@ void Node::packNotes(Node* rootNode, File* file, int tab)
 
 			file->addString("   -\t");
 			file->addString(dat.c_str());
-			file->addString("\n");
+			file->addString("\r\n");
 		}
 
 		for (auto cn : node.nodes)
@@ -87,6 +87,11 @@ void Node::write(const char* path)
 	}
 
 	file.write();
+}
+
+void Node::trackTypes(bool b)
+{
+	track = b;
 }
 
 int Node::getAsInt(size_t at)
@@ -152,7 +157,7 @@ Node Node::loadNode(const char* path)
 
 	while (fileData.size() != 0)
 	{
-		auto pos = fileData.find_first_of("\n");
+		auto pos = fileData.find_first_of("\r\n");
 		char* line = new char[pos + 1];
 	
 		if (line == nullptr)
@@ -162,7 +167,7 @@ Node Node::loadNode(const char* path)
 	
 		memcpy(line, &fileData[0], pos);
 		line[pos] = '\0';
-		fileData.erase(fileData.begin(), fileData.begin() + pos + 1);
+		fileData.erase(fileData.begin(), fileData.begin() + pos + 2);
 
 		size_t tabs = 0;
 		std::string lineData(line);

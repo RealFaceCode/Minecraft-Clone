@@ -1,11 +1,11 @@
 window:
 	settings:
 		width:
-		   -	1280
+		   -	720
 		resizable:
 		   -	0
 		height:
-		   -	800
+		   -	480
 		fullscreen:
 		   -	0
 		monitor:

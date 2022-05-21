@@ -45,7 +45,7 @@ public:
 	uint32_t getUI32();
 	int64_t getI64();
 	uint64_t getUI64();
-	bool getbool();
+	bool getBool();
 	float getFloat();
 	double getDouble();
 	char* getCString();
@@ -59,11 +59,11 @@ public:
 	void addUI32(uint32_t dat);
 	void addI64(int64_t dat);
 	void addUI64(uint64_t dat);
-	void addbool(bool dat);
+	void addBool(bool dat);
 	void addFloat(float dat);
 	void addDouble(double dat);
-	void addString(const char* dat);
-	void addCString(const char* dat);
+	void addString(const char* dat);	//Adds a string without the string length
+	void addCString(const char* dat);	//Adds a string with the string length
 
 	bool read();
 	bool write();
